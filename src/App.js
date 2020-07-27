@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useDataFetch } from './hooks/';
+import { DATA1234_URL, DATA4321_URL, DASHBOARD_TITLE } from './common/constants';
+import { Header, Body } from './components';
+import styled from 'styled-components';
+import './theme/tandem.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+  const [{ data: response, isLoading, isError, error, url }, setUrl] = useDataFetch(
+    DATA1234_URL,
+    []
   );
-}
+
+  const dataSet = response?.data;
+
+  const onReload = (e, dataFile) => {
+    e.preventDefault();
+    setUrl(dataFile === 1234 ? DATA1234_URL : DATA4321_URL);
+  };
+
+  return (
+    <Container>
+      <Header heading={DASHBOARD_TITLE} />
+      {dataSet && <Body key={url} data={dataSet} onReload={onReload} />}
+    </Container>
+  );
+};
 
 export default App;
+
+const Container = styled.div`
+  background-color: var(--cyan);
+  text-align: center;
+`;

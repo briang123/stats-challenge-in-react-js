@@ -24,6 +24,6 @@ export const DashboardContainer = styled.div`
   width: 100vw;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--white);
-  background-color: var(--blue);
+  color: var(--lightcolor);
+  background-color: var(--primarybg);
 `;

@@ -59,8 +59,8 @@ const StyledTile = styled(motion.div)`
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  border: 5px solid var(--blueborder);
-  background-color: var(--bluetilebg);
+  border: 5px solid var(--tileborder);
+  background-color: var(--tilebg);
   box-sizing: border-box;
   margin: 10px;
   & h4 {
@@ -70,7 +70,7 @@ const StyledTile = styled(motion.div)`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    border: 10px solid var(--blueborder);
+    border: 10px solid var(--tileborder);
     height: 335px;
     width: 335px;
     margin: 0px;

@@ -3,7 +3,8 @@ import { useDataFetch } from './hooks/';
 import { DATA1234_URL, DATA4321_URL, DASHBOARD_TITLE } from './common/constants';
 import { Header, Body } from './components';
 import styled from 'styled-components';
-import './theme/tandem.css';
+// import './theme/tandem.css';
+import './theme/nautical.css';
 
 const App = () => {
   const [{ data: response, isLoading, isError, error, url }, setUrl] = useDataFetch(
@@ -29,6 +30,6 @@ const App = () => {
 export default App;
 
 const Container = styled.div`
-  background-color: var(--cyan);
+  background-color: var(--secondarybg);
   text-align: center;
 `;

@@ -23,5 +23,5 @@ export const BodyContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  background-color: var(--white);
+  background-color: var(--lightcolor);
 `;

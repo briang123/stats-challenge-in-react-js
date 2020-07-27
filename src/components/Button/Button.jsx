@@ -25,15 +25,15 @@ export const Button = ({
 const defaultButtonCss = css`
   border-radius: 44px;
   width: 375px;
-  background-color: var(--camel);
+  background-color: var(--defaultbtn);
 `;
 
 const submitButtonCss = css`
   width: 30%;
   border-radius: 0px 20px 20px 0px;
-  background-color: var(--pink);
+  background-color: var(--primarybtn);
   :disabled {
-    background-color: var(--lgtpink);
+    background-color: var(--disabledbtn);
   }
 `;
 
@@ -41,11 +41,11 @@ const StyledButton = styled.button`
   display: flex;
   flex-wrap: wrap;
   border: none;
-  height: 75px;
+  height: 4.87rem;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: var(--white);
+  color: var(--lightcolor);
   outline: none;
   ${(props) => (props.btnType === 'submit' ? submitButtonCss : defaultButtonCss)}
   :hover {

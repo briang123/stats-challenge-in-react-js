@@ -24,7 +24,7 @@ const Input = (
       ref={ref}
       data-testid={testid}
       tabIndex={tabIndex}
-      type="text"
+      type="number"
       placeholder={placeholder}
       onKeyUp={onKeyUp}
       onKeyPress={onKeyPress}
@@ -48,15 +48,21 @@ const StyledInput = styled.input`
     outline: none;
   }
   ::-webkit-input-placeholder {
-    color: var(--lgtpink);
+    color: var(--disabledbtn);
   }
   ::-moz-placeholder {
-    color: var(--lgtpink);
+    color: var(--disabledbtn);
   }
   :-ms-input-placeholder {
-    color: var(--lgtpink);
+    color: var(--disabledbtn);
   }
   :-moz-placeholder {
-    color: var(--lgtpink);
+    color: var(--disabledbtn);
   }
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  -moz-appearance: textfield;
 `;

@@ -32,7 +32,7 @@ const FormContainer = styled.div`
   min-width: 100vw;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--cyan);
+  background-color: var(--secondarybg);
 `;
 
 const ReloadContainer = styled.div`
@@ -46,7 +46,7 @@ const ReloadContainer = styled.div`
     margin: 10px;
   }
   @media (min-width: 600px) {
-    min-width: 75vw;
+    min-width: 55vw;
     & button {
       margin: 0px;
     }

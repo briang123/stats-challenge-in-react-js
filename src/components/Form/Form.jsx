@@ -48,7 +48,7 @@ const FormContainer = styled.div`
   min-width: 100vw;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--cyan);
+  background-color: var(--secondarybg);
 `;
 
 const InputButtonGroup = styled.div`

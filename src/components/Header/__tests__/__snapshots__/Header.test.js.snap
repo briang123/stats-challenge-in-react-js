@@ -1,5 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Header /> Should match snapshot with heading and description text 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 20vh;
+  font-size: calc(10px + 4vmin);
+  background-color: var(--lightcolor);
+  color: var(--darktext);
+  margin-top: 25px;
+}
+
+.c1 {
+  height: 15vmin;
+  pointer-events: none;
+}
+
+.c2 {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+@media (min-width:600px) {
+  .c0 {
+    font-weight: bold;
+    font-size: calc(10px + 2vmin);
+  }
+}
+
+@media (min-width:600px) {
+  .c1 {
+    height: 6vmin;
+  }
+}
+
+<div
+  className="c0"
+  data-testid="header"
+>
+  <img
+    alt="logo"
+    className="c1"
+    src="logo.svg"
+    style={
+      Object {
+        "transform": "scale(0.75) translateZ(0)",
+      }
+    }
+  />
+  <p
+    className="c2"
+    data-testid="heading"
+  >
+    foo
+  </p>
+</div>
+`;
+
 exports[`<Header /> Should match snapshot with heading text 1`] = `
 .c0 {
   display: -webkit-box;
@@ -28,8 +101,13 @@ exports[`<Header /> Should match snapshot with heading text 1`] = `
 }
 
 .c1 {
-  height: 10vmin;
+  height: 15vmin;
   pointer-events: none;
+}
+
+.c2 {
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 @media (min-width:600px) {
@@ -55,12 +133,13 @@ exports[`<Header /> Should match snapshot with heading text 1`] = `
     src="logo.svg"
     style={
       Object {
-        "transform": "scale(0.25) translateZ(0)",
+        "transform": "scale(0.75) translateZ(0)",
       }
     }
   />
   <p
-    className=""
+    className="c2"
+    data-testid="heading"
   >
     foo
   </p>
@@ -95,8 +174,13 @@ exports[`<Header /> Should match snapshot without heading text 1`] = `
 }
 
 .c1 {
-  height: 10vmin;
+  height: 15vmin;
   pointer-events: none;
+}
+
+.c2 {
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 @media (min-width:600px) {
@@ -122,14 +206,13 @@ exports[`<Header /> Should match snapshot without heading text 1`] = `
     src="logo.svg"
     style={
       Object {
-        "transform": "scale(0.25) translateZ(0)",
+        "transform": "scale(0.75) translateZ(0)",
       }
     }
   />
   <p
-    className=""
-  >
-    
-  </p>
+    className="c2"
+    data-testid="heading"
+  />
 </div>
 `;

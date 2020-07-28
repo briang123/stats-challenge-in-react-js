@@ -2,6 +2,7 @@
   --lightcolor: rgba(255, 255, 255, 1);
   --secondarybg: rgba(41, 41, 41, 1);
   --darktext: rgba(71, 71, 71, 1);
+  --lighttext: rgba(71, 71, 71, 0.85);
   --primarybg: rgba(0, 136, 189, 1);
   --tileborder: rgba(0, 136, 189, 0.5);
   --tilebg: rgba(0, 97, 129, 1);
@@ -12,8 +13,9 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif, 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Inter', sans-serif, 'Open Sans', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
   -webkit-font-smoothing: antialiased;
@@ -21,5 +23,6 @@ body {
 }
 
 code {
-  font-family: source252, 204, 115-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source252, 204, 115-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
 }

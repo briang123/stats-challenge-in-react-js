@@ -1,24 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from './../index';
+import { DATASETS } from '../../common/constants';
 import styled from 'styled-components';
 
 export const DataReload = ({ onClick }) => {
   return (
     <FormContainer data-testid="reload-container">
       <ReloadContainer>
-        <Button
-          testid="btn-1234"
-          text="Reload JSON-1234 Data"
-          btnType="default"
-          onClick={(e) => onClick(e, 1234)}
-        />
-        <Button
-          testid="btn-4321"
-          text="Reload JSON-4321 Data"
-          btnType="default"
-          onClick={(e) => onClick(e, 4321)}
-        />
+        {DATASETS.map((item) => (
+          <Button
+            testid={`btn-${item.onClickArg}`}
+            text={item.buttonText}
+            btnType="default"
+            onClick={(e) => onClick(e, item.onClickArg)}
+          />
+        ))}
       </ReloadContainer>
     </FormContainer>
   );

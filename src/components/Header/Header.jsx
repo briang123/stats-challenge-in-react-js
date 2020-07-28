@@ -6,17 +6,17 @@ import { motion } from 'framer-motion';
 
 const variants = {
   load: {
-    scale: 1.2,
+    scale: 2,
     transition: {
       type: 'spring',
     },
   },
   unload: {
-    scale: 0.25,
+    scale: 0.75,
   },
 };
 
-export const Header = ({ heading }) => {
+export const Header = ({ heading, description }) => {
   return (
     <StyledHeader data-testid="header">
       <Logo
@@ -27,17 +27,22 @@ export const Header = ({ heading }) => {
         animate="load"
         exit="unload"
       />
-      <Heading>{heading}</Heading>
+      <Heading data-testid="heading">{heading}</Heading>
+      {description && (
+        <Description data-testid="description">{description}</Description>
+      )}
     </StyledHeader>
   );
 };
 
 Header.propTypes = {
-  heading: PropTypes.string,
+  heading: PropTypes.string.isRequired,
+  description: PropTypes.string,
 };
 
 Header.defaultProps = {
-  heading: '',
+  heading: null,
+  description: null,
 };
 
 export default Header;
@@ -54,18 +59,25 @@ const StyledHeader = styled.div`
   color: var(--darktext);
   margin-top: 25px;
   @media (min-width: 600px) {
-    /* margin-top: 0px; */
     font-weight: bold;
     font-size: calc(10px + 2vmin);
   }
 `;
 
 const Logo = styled(motion.img)`
-  height: 10vmin;
+  height: 15vmin;
   pointer-events: none;
   @media (min-width: 600px) {
     height: 6vmin;
   }
 `;
 
-const Heading = styled.p``;
+const Heading = styled.p`
+  padding: 0;
+  margin-bottom: 10px;
+`;
+const Description = styled.div`
+  font-size: 0.5em;
+  width: 60vw;
+  color: var(--lighttext);
+`;

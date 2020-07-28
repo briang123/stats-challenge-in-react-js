@@ -90,6 +90,9 @@ const StyledTile = styled(motion.div)`
 
 const Title = styled.h4`
   margin: 5px 0px;
+  color: var(--primarybg);
 `;
 
-const Value = styled(motion.div)``;
+const Value = styled(motion.h3)`
+  margin: 0px;
+`;

@@ -76,8 +76,14 @@ const Heading = styled.p`
   padding: 0;
   margin-bottom: 10px;
 `;
+
 const Description = styled.div`
   font-size: 0.5em;
-  width: 60vw;
+  width: 90vw;
   color: var(--lighttext);
+  margin-bottom: 10px;
+  @media (min-width: 600px) {
+    margin-bottom: 0px;
+    width: 60vw;
+  }
 `;

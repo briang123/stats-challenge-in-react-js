@@ -1,27 +1,42 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-// import { MemoryRouter } from 'react-router-dom';
 import Tile from './../Tile';
 
 afterEach(() => {
   cleanup();
-  console.error.mockClear();
 });
 
-console.error = jest.fn();
+describe('<Tile />', () => {
+  it("Tile component should render '--' when no props are supplied", () => {
+    const { getByTestId } = render(<Tile />);
 
-test.skip('Tile component should fail without parameters', () => {
-  render(<Tile />);
-  expect(console.error).toHaveBeenCalled();
-});
+    const container = getByTestId('tile-container');
+    expect(container.childElementCount).toBe(1);
 
-const data = [1, 2, 3, 4, 5];
-const title = 'foo';
-const calculate = jest.fn();
+    const value = getByTestId('tile-value');
+    expect(value.textContent).toBe('--');
+  });
 
-test.skip('Tile component should pass with all props', () => {
-  const { getByTestId } = render(<Tile title={title} value={data} />);
-  expect(console.error).not.toHaveBeenCalled();
-  // expect(getByTestId('').getAttribute('href')).toBe(`/${movie.id}`);
-  // expect(getByTestId('movie-img').src).toBe(`${POSTER_PATH}${movie.poster_path}`);
+  it('Tile component should render only value when title prop is not supplied', () => {
+    const { getByTestId } = render(<Tile value="1" />);
+
+    const container = getByTestId('tile-container');
+    expect(container.childElementCount).toBe(1);
+
+    const value = getByTestId('tile-value');
+    expect(value.textContent).toBe('1');
+  });
+
+  it('Tile component should both title and value value and title props are supplied', () => {
+    const { getByTestId } = render(<Tile title="foo" value="1" />);
+
+    const container = getByTestId('tile-container');
+    expect(container.childElementCount).toBe(2);
+
+    const title = getByTestId('tile-title');
+    expect(title.textContent).toBe('foo');
+
+    const value = getByTestId('tile-value');
+    expect(value.textContent).toBe('1');
+  });
 });

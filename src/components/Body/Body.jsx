@@ -5,13 +5,21 @@ import { useStatistics } from '../../hooks';
 import styled from 'styled-components';
 
 export const Body = ({ data, onReload }) => {
-  const { dataSet, mean, median, mode, setDataSet, stdDev } = useStatistics(data);
+  const { dataSet, mean, median, mode, setDataSet, stdDev } = useStatistics(
+    data
+  );
 
   return (
     <BodyContainer data-testid="body-container">
-      <Dashboard mean={mean} median={median} stdDev={stdDev} mode={mode} />
-      <Form dataSet={dataSet} setDataSet={setDataSet} />
-      <DataReload onClick={onReload} />
+      <Dashboard
+        data-testid="dashboard"
+        mean={mean}
+        median={median}
+        stdDev={stdDev}
+        mode={mode}
+      />
+      <Form data-testid="form" dataSet={dataSet} setDataSet={setDataSet} />
+      <DataReload data-testid="data-reload" onClick={onReload} />
     </BodyContainer>
   );
 };

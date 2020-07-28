@@ -4,7 +4,7 @@ export const ASCII_ENTER_KEY = 13;
 
 export const DASHBOARD_TITLE = 'ReactJS Code Challenge';
 export const DASHBOARD_DESC =
-  'SPA app with simple dashboard that displays four tiles, each displaying a single statistic (Mean, Median, Std Deviation, Mode) for a dataset that is retrieved via a REST API call. The user should be able to request new data to be loaded and to see the statistics in the tiles update to reflect the new dataset';
+  'SPA app with simple dashboard that displays four tiles, each displaying a single statistic (Mean, Median, Std Deviation, Mode) for a dataset that is retrieved via a REST API call. The user should be able to request new data to be loaded and to see the statistics in the tiles update to reflect the new dataset.';
 export const DATA1234_URL = 'http://localhost:3001/api/v1.0/data1234';
 export const DATA4321_URL = 'http://localhost:3001/api/v1.0/data4321';
 

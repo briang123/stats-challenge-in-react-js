@@ -28,7 +28,7 @@ const statVariants = {
 export const Tile = ({ value, title }) => {
   return (
     <StyledTile
-      data-testid={`tile-container-${value}`}
+      data-testid={`tile-container`}
       variants={containerVariants}
       initial="closed"
       animate="open"

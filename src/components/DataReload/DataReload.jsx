@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button } from './../index';
 import styled from 'styled-components';
 
@@ -21,6 +22,14 @@ export const DataReload = ({ onClick }) => {
       </ReloadContainer>
     </FormContainer>
   );
+};
+
+DataReload.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
+
+DataReload.defaultProps = {
+  onClick: () => null,
 };
 
 export default DataReload;

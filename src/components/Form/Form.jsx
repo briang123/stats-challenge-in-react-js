@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from './../index';
 import Input from '../Input/Input';
 import styled from 'styled-components';

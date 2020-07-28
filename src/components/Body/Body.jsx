@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { DataReload, Form, Dashboard } from '../';
 import { useStatistics } from '../../hooks';
 import styled from 'styled-components';
@@ -13,6 +14,16 @@ export const Body = ({ data, onReload }) => {
       <DataReload onClick={onReload} />
     </BodyContainer>
   );
+};
+
+Body.propTypes = {
+  data: PropTypes.array.isRequired,
+  onReload: PropTypes.func.isRequired,
+};
+
+Body.defaultProps = {
+  data: [],
+  onReload: () => null,
 };
 
 export const BodyContainer = styled.div`

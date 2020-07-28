@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DataReload /> Should match snapshot with props 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: none;
+  height: 4.87rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--lightcolor);
+  outline: none;
+  border-radius: 44px;
+  width: 375px;
+  background-color: var(--defaultbtn);
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100px;
+  min-width: 100vw;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  background-color: var(--secondarybg);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-width: 50vw;
+  height: 125px;
+}
+
+.c1 button {
+  margin: 10px;
+}
+
+@media (min-width:600px) {
+  .c1 {
+    min-width: 55vw;
+  }
+
+  .c1 button {
+    margin: 0px;
+  }
+}
+
+<div
+  className="c0"
+  data-testid="reload-container"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      data-testid="btn-1234"
+      disabled={false}
+      onClick={[Function]}
+      tabIndex={-1}
+    >
+      Reload JSON-1234 Data
+    </button>
+    <button
+      className="c2"
+      data-testid="btn-4321"
+      disabled={false}
+      onClick={[Function]}
+      tabIndex={-1}
+    >
+      Reload JSON-4321 Data
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<DataReload /> Should match snapshot without props 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: none;
+  height: 4.87rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--lightcolor);
+  outline: none;
+  border-radius: 44px;
+  width: 375px;
+  background-color: var(--defaultbtn);
+}
+
+.c2:hover {
+  cursor: pointer;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100px;
+  min-width: 100vw;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  background-color: var(--secondarybg);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  min-width: 50vw;
+  height: 125px;
+}
+
+.c1 button {
+  margin: 10px;
+}
+
+@media (min-width:600px) {
+  .c1 {
+    min-width: 55vw;
+  }
+
+  .c1 button {
+    margin: 0px;
+  }
+}
+
+<div
+  className="c0"
+  data-testid="reload-container"
+>
+  <div
+    className="c1"
+  >
+    <button
+      className="c2"
+      data-testid="btn-1234"
+      disabled={false}
+      onClick={[Function]}
+      tabIndex={-1}
+    >
+      Reload JSON-1234 Data
+    </button>
+    <button
+      className="c2"
+      data-testid="btn-4321"
+      disabled={false}
+      onClick={[Function]}
+      tabIndex={-1}
+    >
+      Reload JSON-4321 Data
+    </button>
+  </div>
+</div>
+`;

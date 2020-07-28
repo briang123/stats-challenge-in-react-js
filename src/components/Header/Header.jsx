@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import logo from './../../logo.svg';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
@@ -29,6 +30,14 @@ export const Header = ({ heading }) => {
       <Heading>{heading}</Heading>
     </StyledHeader>
   );
+};
+
+Header.propTypes = {
+  heading: PropTypes.string,
+};
+
+Header.defaultProps = {
+  heading: '',
 };
 
 export default Header;

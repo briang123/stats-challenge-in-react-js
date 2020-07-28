@@ -14,6 +14,20 @@ export const Dashboard = ({ mean, median, stdDev, mode }) => {
   );
 };
 
+Dashboard.propTypes = {
+  mean: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  median: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  stdDev: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  mode: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};
+
+Dashboard.defaultProps = {
+  mean: '--',
+  median: '--',
+  stdDev: '--',
+  mode: '--',
+};
+
 export default Dashboard;
 
 export const DashboardContainer = styled.div`

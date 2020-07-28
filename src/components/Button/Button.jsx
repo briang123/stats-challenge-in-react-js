@@ -2,14 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-export const Button = ({
-  testid,
-  text,
-  onClick,
-  tabIndex = -1,
-  btnType = 'default',
-  disabled = false,
-}) => {
+export const Button = ({ testid, text, onClick, tabIndex, btnType, disabled }) => {
   return (
     <StyledButton
       data-testid={testid}
@@ -21,6 +14,24 @@ export const Button = ({
       {text}
     </StyledButton>
   );
+};
+
+Button.propTypes = {
+  testid: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  tabIndex: PropTypes.number.isRequired,
+  btnType: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
+};
+
+Button.defaultProps = {
+  testid: Math.random(),
+  text: '',
+  onClick: () => null,
+  tabIndex: -1,
+  btnType: 'default',
+  disabled: false,
 };
 
 const defaultButtonCss = css`

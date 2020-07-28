@@ -40,6 +40,16 @@ export const Form = ({ setDataSet, dataSet }) => {
   );
 };
 
+Form.propTypes = {
+  setDataSet: PropTypes.func.isRequired,
+  dataSet: PropTypes.array.isRequired,
+};
+
+Form.defaultProps = {
+  setDataSet: () => null,
+  dataSet: [],
+};
+
 export default Form;
 
 const FormContainer = styled.div`

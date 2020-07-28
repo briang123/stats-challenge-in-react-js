@@ -44,10 +44,20 @@ export const Tile = ({ value, title }) => {
         exit="closed"
         data-testid="tile-value"
       >
-        {value || '--'}
+        {value}
       </Value>
     </StyledTile>
   );
+};
+
+Tile.propTypes = {
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  title: PropTypes.string.isRequired,
+};
+
+Tile.defaultProps = {
+  value: '--',
+  title: '',
 };
 
 export default Tile;

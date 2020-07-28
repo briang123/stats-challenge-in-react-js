@@ -10,6 +10,7 @@ export const DataReload = ({ onClick }) => {
       <ReloadContainer>
         {DATASETS.map((item) => (
           <Button
+            key={item.onClickArg}
             testid={`btn-${item.onClickArg}`}
             text={item.buttonText}
             btnType="default"

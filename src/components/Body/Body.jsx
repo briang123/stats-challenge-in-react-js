@@ -12,6 +12,7 @@ export const Body = ({ data, onReload }) => {
   return (
     <BodyContainer data-testid="body-container">
       <Dashboard
+        key={Math.random()}
         data-testid="dashboard"
         mean={mean}
         median={median}

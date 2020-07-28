@@ -36,7 +36,13 @@ Develop a Single Page App (SPA) that shows a simple dashboard that displays four
   <li>Unit Tests
     <ul>
       <li>Jest</li>
+      <li>Jest (styled components)</li>
       <li>React Testing Library</li>
+    </ul>
+  </li>
+  <li>End to End Tests
+    <ul>
+      <li>Cypress</li>
     </ul>
   </li>
 </ul>
@@ -70,3 +76,11 @@ Open [http://localhost:3001](http://localhost:3001) in a web browser to test you
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run cypress`
+
+Launches the Cypress test runner in the interactive mode.<br />
+
+### `npm run cypress:e2e`
+
+Ensure that the React app is runng on [http://localhost:3000](http://localhost:3000) before running this command as Cypress will attempt to access it to do its thing. This command will run the test I created this and output to the terminal.<br/>

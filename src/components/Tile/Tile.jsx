@@ -26,23 +26,27 @@ const statVariants = {
 };
 
 export const Tile = ({ value, title }) => {
+  if (!title) {
+    console.error('Title is required for dashboard tile');
+    return null;
+  }
+
   return (
     <StyledTile
-      data-testid={`tile-container`}
+      data-testid={`tile-container-${title}`}
       variants={containerVariants}
       initial="closed"
       animate="open"
       exit="closed"
     >
-      {title && <Title data-testid="tile-title">{title}</Title>}
+      <Title data-testid={`tile-title-${title}`}>{title}</Title>
       <Value
-        data-testid="tile-value"
+        data-testid={`tile-value-${title}`}
         key={value}
         variants={statVariants}
         initial="closed"
         animate="open"
         exit="closed"
-        data-testid="tile-value"
       >
         {value}
       </Value>
@@ -57,7 +61,6 @@ Tile.propTypes = {
 
 Tile.defaultProps = {
   value: '--',
-  title: '',
 };
 
 export default Tile;

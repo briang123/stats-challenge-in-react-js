@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDataFetch } from './hooks/';
 import {
+  DATASET_BASELINE_URL,
   DATASET_1,
   DATASET_2,
   DASHBOARD_TITLE,
@@ -20,9 +21,18 @@ const App = () => {
 
   const onReload = (e, dataFile) => {
     e.preventDefault();
-    setUrl(dataFile === DATASET_1.onClickArg ? DATASET_1.url : DATASET_2.url);
+    console.log('onReload', dataSet, url, `${DATASET_BASELINE_URL}${dataFile}`);
+
+    setUrl(`${DATASET_BASELINE_URL}${dataFile}`);
+
+    // setUrl(dataFile === DATASET_1.onClickArg ? DATASET_1.url : DATASET_2.url);
   };
 
+  useEffect(() => {
+    console.log('useEffect', dataSet, url);
+  });
+
+  console.log({ response, dataSet, isLoading, isError, error, url });
   return (
     <Container>
       <Header heading={DASHBOARD_TITLE} description={DASHBOARD_DESC} />

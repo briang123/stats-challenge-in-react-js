@@ -1,15 +1,16 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const routes = require('./routes');
 const docs = require('./routes/docs');
 const app = express();
 const cors = require('cors');
 
+const { json, urlencoded } = express;
+
 app.use(cors());
 
 const description = `Rest API for calculating Mean, Median, Standard Deviation, and Mode`;
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(json());
+app.use(urlencoded({ extended: true }));
 app.get('/', (req, res) =>
   res.send({
     status: 'Boom, server is working!',

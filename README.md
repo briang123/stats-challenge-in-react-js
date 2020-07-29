@@ -184,4 +184,4 @@ I'm leveraging `Styled Components` and, at times, co-mingling with `Framer Motio
 
 ### End to End Tests (Cypress)
 
-...
+![End to End Tests](cypress-tests.gif)

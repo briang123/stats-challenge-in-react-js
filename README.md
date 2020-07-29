@@ -180,7 +180,7 @@ I'm leveraging `Styled Components` and, at times, co-mingling with `Framer Motio
 
 ### Unit Tests (Jest, React Testing Library)
 
-...
+![Unit Tests](stats-unit-tests.gif)
 
 ### End to End Tests (Cypress)
 

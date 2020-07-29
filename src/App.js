@@ -26,7 +26,7 @@ const App = () => {
   return (
     <Container>
       <Header heading={DASHBOARD_TITLE} description={DASHBOARD_DESC} />
-      {dataSet && !isLoading && <Body key={url} data={dataSet} onReload={onReload} />}
+      {dataSet && !isLoading && <Body data={dataSet} onReload={onReload} />}
     </Container>
   );
 };

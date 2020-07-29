@@ -7,19 +7,14 @@ context('Actions', () => {
 
   it('Usability should work as expected', () => {
     // Assert that the data loaded by default (JSON-1234) shows the correct results for each of the dashboard tiles
-    cy.get('[data-testid="tile-value-Mean"]').should('have.text', '50.346679');
 
-    cy.get('[data-testid="tile-value-Median"]').should(
-      'have.text',
-      '51.000000'
-    );
+    cy.get('[data-testid="tile-value-Mean"]').should('have.text', '49.457050');
 
-    cy.get('[data-testid="tile-value-Std Deviation"]').should(
-      'have.text',
-      '29.191159'
-    );
+    cy.get('[data-testid="tile-value-Median"]').should('have.text', '49.000000');
 
-    cy.get('[data-testid="tile-value-Mode"]').should('have.text', '82.000000');
+    cy.get('[data-testid="tile-value-Std Deviation"]').should('have.text', '28.810315');
+
+    cy.get('[data-testid="tile-value-Mode"]').should('have.text', '77.000000');
 
     // Assert that the input has what we expect
     cy.get('[data-testid="datapoint"]')
@@ -39,15 +34,9 @@ context('Actions', () => {
     // Assert that after entering a new value then clicking the submit button that the state of the dashboard tiles get updated with the correct results
     cy.get('[data-testid="tile-value-Mean"]').should('have.text', '49.451012');
 
-    cy.get('[data-testid="tile-value-Median"]').should(
-      'have.text',
-      '49.000000'
-    );
+    cy.get('[data-testid="tile-value-Median"]').should('have.text', '49.000000');
 
-    cy.get('[data-testid="tile-value-Std Deviation"]').should(
-      'have.text',
-      '28.799421'
-    );
+    cy.get('[data-testid="tile-value-Std Deviation"]').should('have.text', '28.799421');
 
     cy.get('[data-testid="tile-value-Mode"]').should('have.text', '77.000000');
 
@@ -59,22 +48,14 @@ context('Actions', () => {
     //   'Reload JSON-1234 Data'
     // );
 
-    cy.get('[data-testid="btn-4321"]')
-      .should('have.text', 'Reload JSON-4321 Data')
-      .click();
+    cy.get('[data-testid="btn-4321"]').should('have.text', 'Reload JSON-4321 Data').click();
 
-    cy.get('[data-testid="tile-value-Mean"]').should('have.text', '49.457050');
+    cy.get('[data-testid="tile-value-Mean"]').should('have.text', '50.346679');
 
-    cy.get('[data-testid="tile-value-Median"]').should(
-      'have.text',
-      '49.000000'
-    );
+    cy.get('[data-testid="tile-value-Median"]').should('have.text', '51.000000');
 
-    cy.get('[data-testid="tile-value-Std Deviation"]').should(
-      'have.text',
-      '28.810315'
-    );
+    cy.get('[data-testid="tile-value-Std Deviation"]').should('have.text', '29.191159');
 
-    cy.get('[data-testid="tile-value-Mode"]').should('have.text', '77.000000');
+    cy.get('[data-testid="tile-value-Mode"]').should('have.text', '82.000000');
   });
 });

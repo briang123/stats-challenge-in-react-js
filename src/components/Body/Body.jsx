@@ -5,13 +5,22 @@ import { useStatistics } from '../../hooks';
 import styled from 'styled-components';
 
 export const Body = ({ data, onReload }) => {
-  const { dataSet, mean, median, mode, setDataSet, stdDev } = useStatistics(data);
+  if (!onReload) console.error('Missing onReload event handler');
+  const { dataSet, mean, median, mode, setDataSet, stdDev } = useStatistics(
+    data
+  );
 
   return (
     <BodyContainer data-testid="body-container">
-      <Dashboard data-testid="dashboard" mean={mean} median={median} stdDev={stdDev} mode={mode} />
+      <Dashboard
+        data-testid="dashboard"
+        mean={mean}
+        median={median}
+        stdDev={stdDev}
+        mode={mode}
+      />
       <Form data-testid="form" dataSet={dataSet} setDataSet={setDataSet} />
-      <DataReload data-testid="data-reload" onClick={onReload} />
+      {onReload && <DataReload data-testid="data-reload" onClick={onReload} />}
     </BodyContainer>
   );
 };
@@ -23,8 +32,10 @@ Body.propTypes = {
 
 Body.defaultProps = {
   data: [],
-  onReload: () => null,
+  onReload: null,
 };
+
+export default Body;
 
 export const BodyContainer = styled.div`
   min-height: calc(100vh - 250px);

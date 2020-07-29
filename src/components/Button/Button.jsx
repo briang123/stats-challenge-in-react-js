@@ -2,7 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
-export const Button = ({ testid, text, onClick, tabIndex, btnType, disabled }) => {
+export const Button = ({
+  testid,
+  text,
+  onClick,
+  tabIndex,
+  btnType,
+  disabled,
+}) => {
   return (
     <StyledButton
       data-testid={testid}
@@ -34,6 +41,8 @@ Button.defaultProps = {
   disabled: false,
 };
 
+export default Button;
+
 const defaultButtonCss = css`
   border-radius: 44px;
   width: 375px;
@@ -59,7 +68,8 @@ const StyledButton = styled.button`
   font-size: calc(10px + 2vmin);
   color: var(--lightcolor);
   outline: none;
-  ${(props) => (props.btnType === 'submit' ? submitButtonCss : defaultButtonCss)}
+  ${(props) =>
+    props.btnType === 'submit' ? submitButtonCss : defaultButtonCss}
   :hover {
     cursor: pointer;
   }

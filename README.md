@@ -23,6 +23,35 @@ Develop a Single Page App (SPA) that shows a simple dashboard that displays four
   </li>
 </ol>
 
+## Dashboard Tiles
+
+<ol>
+  <li>Mean – ![https://en.wikipedia.org/wiki/Arithmetic_mean](https://en.wikipedia.org/wiki/Arithmetic_mean 'Mean')</li>
+  <li>Median – ![https://en.wikipedia.org/wiki/Median](https://en.wikipedia.org/wiki/Median 'Median')</li>
+  <li>Standard Deviation – ![https://en.wikipedia.org/wiki/Standard_deviation](https://en.wikipedia.org/wiki/Standard_deviation 'Standard Deviation')</li>
+  <li>Mode – ![https://en.wikipedia.org/wiki/Mode_(statistics)](https://en.wikipedia.org/wiki/Mode_(statistics) 'Mode')</li>
+</ol>
+
+## Expected Results
+
+### data-1234.json
+
+| Tile       |  Default  | After adding 42 |
+| :--------- | :-------: | --------------: |
+| **Mean**   | 49.457050 |       49.451012 |
+| **Median** | 49.000000 |       49.000000 |
+| **StdDev** | 28.810315 |       28.799421 |
+| **Mode**   | 77.000000 |       77.000000 |
+
+### data-4321.json
+
+| Tile       |  Default  | After adding 42 |
+| :--------- | :-------: | --------------: |
+| **Mean**   | 50.346679 |       50.344748 |
+| **Median** | 51.000000 |       51.000000 |
+| **StdDev** | 29.191159 |       29.188057 |
+| **Mode**   | 82.000000 |       82.000000 |
+
 ## Tech Stack
 
 ### Client Stack

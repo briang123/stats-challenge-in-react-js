@@ -25,12 +25,10 @@ Develop a Single Page App (SPA) that shows a simple dashboard that displays four
 
 ## Dashboard Tiles
 
-<ol>
-  <li>Mean – ![https://en.wikipedia.org/wiki/Arithmetic_mean](https://en.wikipedia.org/wiki/Arithmetic_mean 'Mean')</li>
-  <li>Median – ![https://en.wikipedia.org/wiki/Median](https://en.wikipedia.org/wiki/Median 'Median')</li>
-  <li>Standard Deviation – ![https://en.wikipedia.org/wiki/Standard_deviation](https://en.wikipedia.org/wiki/Standard_deviation 'Standard Deviation')</li>
-  <li>Mode – ![https://en.wikipedia.org/wiki/Mode_(statistics)](https://en.wikipedia.org/wiki/Mode_(statistics) 'Mode')</li>
-</ol>
+1. Mean - [https://en.wikipedia.org/wiki/Arithmetic_mean](https://en.wikipedia.org/wiki/Arithmetic_mean 'Mean')
+2. Median – [https://en.wikipedia.org/wiki/Median](https://en.wikipedia.org/wiki/Median 'Median')
+3. Standard Deviation – [https://en.wikipedia.org/wiki/Standard_deviation](https://en.wikipedia.org/wiki/Standard_deviation 'Standard Deviation')
+4. Mode – [https://en.wikipedia.org/wiki/Mode\_(statistics)](<https://en.wikipedia.org/wiki/Mode_(statistics)> 'Mode')
 
 ## Expected Results
 

@@ -87,27 +87,112 @@ Develop a Single Page App (SPA) that shows a simple dashboard that displays four
   </li>
 </ul>
 
+## 🚀 Quick start
+
 ## Scripts
+
+### `git clone`
+
+```shell
+   # clone this project. If you are forking it first, make sure to use your own github username in place of mine ;)
+   git clone https://github.com/briang123/reactjs-stats-code-challenge.git
+```
+
+### `npm install`
+
+Once you clone the project, you will want to make sure you install all dependencies to get up and running.
+
+```shell
+  npm install
+```
 
 ### `npm run dev`
 
-Runs both the server and the client concurrently in development mode.<br />
-Server is listening on [http://localhost:3001](http://localhost:3001) (You will not be able to pull this up in a web browser directly)<br/>
-React app runs on [http://localhost:3000](http://localhost:3000)
+This command runs both the server and the client concurrently in development mode. The server is listening on [http://localhost:3001](http://localhost:3001) (Note: You will not be able to pull this up in a web browser directly) and the React app runs on [http://localhost:3000](http://localhost:3000)
+
+```shell
+  npm run dev
+```
 
 ### `npm run server`
 
 Open [http://localhost:3001](http://localhost:3001) in a web browser to test your Rest API. The root path (http://localhost:3001/) will show you some brief documentation and version information.
 
+```shell
+  npm run server
+```
+
 ### `npm run test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode. See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+```shell
+  npm run test
+```
 
 ### `npm run cypress`
 
-Launches the Cypress test runner in the interactive mode.<br />
+Launches the Cypress test runner in the interactive mode.
+
+```shell
+  npm run cypress
+```
 
 ### `npm run cypress:e2e`
 
-Ensure that the React app is runng on [http://localhost:3000](http://localhost:3000) before running this command as Cypress will attempt to access it to do its thing. This command will run the test I created this and output to the terminal.<br/>
+Ensure that the React app is runng on [http://localhost:3000](http://localhost:3000) before running this command as Cypress will attempt to access it to do its thing. This command will run the test I created this and output to the terminal.
+
+```shell
+  npm run cypress:e2e
+```
+
+## 🧐 What's inside?
+
+A quick look at the top level directories you'll see in this project.
+
+    .
+    ├── cypress
+    ├──── integration
+    ├────── dashboard
+    ├── public
+    ├── server
+    ├──── controllers
+    ├──── db
+    ├──── routes
+    ├──── services
+    ├──── utils
+    ├──── index.js
+    ├── src
+    ├──── common
+    ├──── components
+    ├──── docs
+    ├──── hooks
+    └──── theme
+
+`cypress` - In the cypress -> integration -> dashboard directory, I created end-to-end tests for this project
+
+`public` - React will build and deploy to this folder while in development
+
+`server` - In lieu of creating a separate node server to host the `Rest API` for this challenge/prototype, I took the direction of creating a Node.js server proxy to simplify and expedite the process. If you would like to learn more about this you can [read this article](https://www.twilio.com/blog/react-app-with-node-js-server-proxy).
+
+For the project folder on the server, I structured it so that there is a clear separation of concerns/layers in the application. Basically, we have our `routes`, which forward requests to our `controllers` (handles requests), which make calls to the `services` layer (business logic), which make calls to the `db` where methods are created that make calls to the database or external API's. There is also a separate utils directory that contains any commonl/shared functionality.
+
+`src` - This is the React app that will make the Rest API requests to the server via a custom React hook (`useDataFetch`) to obtain the dataset needed to calculate the statistical data to display on the dashboard.
+
+I created a few additional React hooks to help with this task (`useStatistics` and `useNumArray`). The implementation details for the calcuations exist in the `NumArray` class, which are called directly from `calculateMedian`, `calculateMean`, `calculateStdDeviation`, and `calculateMode`.
+
+Our components are structured so that there is a separation of concerns, as well, but there is room for additional separation.
+
+`App` - Container for the `Header` and `Body` components
+
+`Body` - Container for the `Dashboard`, `Form`, and `DataReload` components.
+
+`Header` - Container for the logo, title, and description
+
+`Dashboard` - Container for the `Tile` component where there is one for each statistic.
+
+`Form` - Container for the input (`Input` component and `useInput` custom React hook) and submit (`Button`) button.
+
+`DataReload` - Container for the two buttons (`Button`) that, when clicked, will trigger a Rest API call to the server to get the data.
+
+I'm leveraging `Styled Components` and, at times, co-mingling with `Framer Motion` to bring the animation you will see. For CSS, I took a very basic mobile-first approach to the layout where I only have a couple breakpoints to change the styles, but using Flexbox to style the page.

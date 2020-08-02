@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NumberInput /> Should match snapshot with props 1`] = `
+.c0 {
+  height: 75px;
+  width: 70%;
+  border-radius: 20px 0px 0px 20px;
+  border: none;
+  font-size: calc(20px + 2vmin);
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.c0:focus {
+  outline: none;
+}
+
+.c0::-webkit-input-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c0::-moz-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c0:-ms-input-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c0:-moz-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c0::-webkit-outer-spin-button,
+.c0::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+<input
+  autoFocus={false}
+  className="c0"
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  onKeyUp={[Function]}
+  placeholder="foo"
+  tabIndex={-1}
+  type="number"
+/>
+`;

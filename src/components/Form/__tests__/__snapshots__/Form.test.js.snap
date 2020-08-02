@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> Should match snapshot with props 1`] = `
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  border: none;
+  height: 4.87rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: var(--lightcolor);
+  outline: none;
+  width: 30%;
+  border-radius: 0px 20px 20px 0px;
+  background-color: var(--primarybtn);
+}
+
+.c3:disabled {
+  background-color: var(--disabledbtn);
+}
+
+.c3:hover {
+  cursor: pointer;
+}
+
+.c2 {
+  height: 75px;
+  width: 70%;
+  border-radius: 20px 0px 0px 20px;
+  border: none;
+  font-size: calc(20px + 2vmin);
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2::-webkit-input-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c2::-moz-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c2:-ms-input-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c2:-moz-placeholder {
+  color: var(--disabledbtn);
+}
+
+.c2::-webkit-outer-spin-button,
+.c2::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 200px;
+  min-width: 100vw;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  background-color: var(--secondarybg);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  min-width: 80vw;
+}
+
+@media (min-width:600px) {
+  .c1 {
+    min-width: 40vw;
+  }
+}
+
+<div
+  className="c0"
+  data-testid="form-container"
+>
+  <div
+    className="c1"
+  >
+    <input
+      autoFocus={true}
+      className="c2"
+      data-testid="datapoint"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
+      placeholder="Enter a number"
+      tabIndex={0}
+      type="number"
+      value=""
+    />
+    <button
+      className="c3"
+      data-testid="submit-btn"
+      disabled={true}
+      onClick={[Function]}
+      tabIndex={-1}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;

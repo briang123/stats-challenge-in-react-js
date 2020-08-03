@@ -18,16 +18,18 @@ export const Form = ({ setDataSet, dataSet }) => {
   return (
     <FormContainer data-testid="form-container">
       <InputButtonGroup>
-        <NumberInput
-          testid="datapoint"
-          ref={inputRef}
-          tabIndex={0}
-          placeholder="Enter a number"
-          value={dataValue}
-          autoFocus={true}
-          setValue={setDataValue}
-          onSubmit={handleSubmit}
-        />
+        <div>
+          <NumberInput
+            testid="datapoint"
+            ref={inputRef}
+            tabIndex={0}
+            placeholder="Enter a number"
+            value={dataValue}
+            autoFocus={true}
+            setValue={setDataValue}
+            onSubmit={handleSubmit}
+          />
+        </div>
         <Button
           testid="submit-btn"
           onClick={handleSubmit}
@@ -63,10 +65,26 @@ const FormContainer = styled.div`
 `;
 
 const InputButtonGroup = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   min-width: 80vw;
+  display: table;
+  border-collapse: collapse;
+  & > div {
+    padding: 0px;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle; /* needed for Safari */
+  }
+  & input {
+    border: 0;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    height: 76px;
+  }
+  & button {
+    min-width: 250px;
+    width: 100%;
+  }
   @media (min-width: 600px) {
     min-width: 40vw;
   }

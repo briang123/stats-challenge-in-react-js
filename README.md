@@ -11,7 +11,7 @@ Develop a Single Page App (SPA) that shows a simple dashboard that displays four
 ## Requirements
 
 1. The app shall be implemented using ReactJS components and developed using either JavaScript or TypeScript, with the latter preferred.
-2. The app shall display four statistics tiles: Mean, Median,Standard Deviation and Mode.
+2. The app shall display four statistics tiles: Mean, Median, Standard Deviation, and Mode.
 3. The app shall present a button which, when clicked, will cause a new dataset to be loaded(replacing the current dataset)and the dashboard display to be updated to reflect the newly loaded data.
 4. The app shall present an inputfield that will accept a number and a submit button which, when clicked, will cause the number to be addedto the currently loaded datasetand the dashboard tiles to update to reflect the new dataset state.
 
@@ -125,7 +125,7 @@ Launches the Cypress test runner in the interactive mode.
 
 ### `npm run cypress:e2e`
 
-Ensure that the React app is runng on [http://localhost:3000](http://localhost:3000) before running this command as Cypress will attempt to access it to do its thing. This command will run the test I created this and output to the terminal.
+Ensure that the React app is running on [http://localhost:3000](http://localhost:3000) before running this command as Cypress will attempt to access it to do its thing. This command will run the test I created this and output to the terminal.
 
 ```shell
   npm run cypress:e2e
@@ -184,7 +184,7 @@ A quick look at the top level directories you'll see in this project.
 
 `server` - In lieu of creating a separate Node.js server to that provides the Rest API for this challenge, I took the direction of creating a Node.js server proxy to simplify and expedite the process. If you would like to learn more about this you can [read this article](https://www.twilio.com/blog/react-app-with-node-js-server-proxy).
 
-For the project folder on the server, I structured it so that there is a clear separation of concerns/layers in the application. Basically, we have our `routes`, which forward requests to our `controllers` (handles requests), which make calls to the `services` layer (business logic), which make calls to the `db` where methods are created that make calls to the database or external API's. There is also a separate utils directory that contains any commonl/shared functionality.
+For the project folder on the server, I structured it so that there is a clear separation of concerns/layers in the application. Basically, we have our `routes`, which forward requests to our `controllers` (handles requests), which make calls to the `services` layer (business logic), which make calls to the `db` where methods are created that make calls to the database or external API's. There is also a separate utils directory that contains any common/shared functionality.
 
 `src` - This is the React app that will make the Rest API requests to the server via a custom React hook (**useDataFetch**) to obtain the dataset needed to calculate the statistical data to display on the dashboard.
 

@@ -82,10 +82,15 @@ const InputButtonGroup = styled.div`
     height: 76px;
   }
   & button {
-    min-width: 250px;
+    min-width: 100px;
     width: 100%;
   }
+
   @media (min-width: 600px) {
     min-width: 40vw;
+    & button {
+      min-width: 250px;
+      width: 100%;
+    }
   }
 `;

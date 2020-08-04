@@ -42,9 +42,7 @@ describe('<Header />', () => {
   });
 
   it('Should render logo, heading text, and description', () => {
-    const { getByTestId, getByAltText } = render(
-      <Header heading="foo" description="bar" />
-    );
+    const { getByTestId, getByAltText } = render(<Header heading="foo" description="bar" />);
 
     const container = getByTestId('header');
     expect(container.tagName).toBe('DIV');
@@ -59,7 +57,7 @@ describe('<Header />', () => {
 
     const description = getByTestId('description');
     expect(description.tagName).toBe('DIV');
-    expect(description.textContent).toBe('bar');
+    expect(description.textContent).toBe('barView on GitHub');
   });
 
   it('Should match snapshot with heading and description text', () => {

@@ -92,7 +92,9 @@ describe('<Body />', () => {
     const inputBtnGroupContainer = formContainer.firstChild;
     expect(inputBtnGroupContainer.childElementCount).toBe(2);
 
-    expect(inputBtnGroupContainer.firstChild.tagName).toBe('INPUT');
+    //FIX: ADDED THE DIV CONTAINER
+    expect(inputBtnGroupContainer.firstChild.tagName).toBe('DIV');
+    // expect(inputBtnGroupContainer.firstChild.tagName).toBe('INPUT');
     expect(inputBtnGroupContainer.lastChild.tagName).toBe('BUTTON');
   });
 

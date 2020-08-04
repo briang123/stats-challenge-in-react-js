@@ -29,7 +29,12 @@ export const Header = ({ heading, description }) => {
       />
       <Heading data-testid="heading">{heading}</Heading>
       {description && (
-        <Description data-testid="description">{description}</Description>
+        <Description data-testid="description">
+          {description}
+          <GitHubLink href="https://github.com/briang123/stats-challenge-in-react-js">
+            View on GitHub
+          </GitHubLink>
+        </Description>
       )}
     </StyledHeader>
   );
@@ -86,4 +91,8 @@ const Description = styled.div`
     margin-bottom: 0px;
     width: 60vw;
   }
+`;
+
+const GitHubLink = styled.a`
+  margin-left: 3px;
 `;

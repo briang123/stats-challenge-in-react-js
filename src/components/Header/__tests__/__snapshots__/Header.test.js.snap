@@ -20,11 +20,12 @@ exports[`<Header /> Should match snapshot with heading and description text 1`] 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  min-width: 100vw;
   min-height: 20vh;
   font-size: calc(10px + 4vmin);
   background-color: var(--lightcolor);
   color: var(--darktext);
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 .c1 {
@@ -93,11 +94,12 @@ exports[`<Header /> Should match snapshot with heading text 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  min-width: 100vw;
   min-height: 20vh;
   font-size: calc(10px + 4vmin);
   background-color: var(--lightcolor);
   color: var(--darktext);
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 .c1 {
@@ -166,11 +168,12 @@ exports[`<Header /> Should match snapshot without heading text 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  min-width: 100vw;
   min-height: 20vh;
   font-size: calc(10px + 4vmin);
   background-color: var(--lightcolor);
   color: var(--darktext);
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 .c1 {

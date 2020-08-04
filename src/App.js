@@ -11,10 +11,10 @@ import styled from 'styled-components';
 import './theme/nautical.css';
 
 const App = () => {
-  const [
-    { data: response, isLoading, isError, error, url },
-    setUrl,
-  ] = useDataFetch(DATASET_1.url, []);
+  const [{ data: response, isLoading, isError, error, url }, setUrl] = useDataFetch(
+    DATASET_1.url,
+    []
+  );
 
   const dataSet = response?.data;
 
@@ -34,6 +34,5 @@ const App = () => {
 export default React.memo(App);
 
 const Container = styled.div`
-  background-color: var(--secondarybg);
   text-align: center;
 `;

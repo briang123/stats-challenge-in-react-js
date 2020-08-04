@@ -9,23 +9,13 @@ export const Body = ({ data, onReload }) => {
   const isValidReloadFunction = isValidFunction(onReload);
   if (!isValidReloadFunction) console.error('Body: Invalid onReload function');
 
-  const { dataSet, mean, median, mode, setDataSet, stdDev } = useStatistics(
-    data
-  );
+  const { dataSet, mean, median, mode, setDataSet, stdDev } = useStatistics(data);
 
   return (
     <BodyContainer data-testid="body-container">
-      <Dashboard
-        data-testid="dashboard"
-        mean={mean}
-        median={median}
-        stdDev={stdDev}
-        mode={mode}
-      />
+      <Dashboard data-testid="dashboard" mean={mean} median={median} stdDev={stdDev} mode={mode} />
       <Form data-testid="form" dataSet={dataSet} setDataSet={setDataSet} />
-      {isValidReloadFunction && (
-        <DataReload data-testid="data-reload" onClick={onReload} />
-      )}
+      {isValidReloadFunction && <DataReload data-testid="data-reload" onClick={onReload} />}
     </BodyContainer>
   );
 };
@@ -50,5 +40,5 @@ export const BodyContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
-  background-color: var(--lightcolor);
+  /* background-color: var(--lightcolor); */
 `;

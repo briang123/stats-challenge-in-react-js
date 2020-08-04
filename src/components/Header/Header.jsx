@@ -58,11 +58,12 @@ const StyledHeader = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 100vw;
   min-height: 20vh;
   font-size: calc(10px + 4vmin);
   background-color: var(--lightcolor);
   color: var(--darktext);
-  margin-top: 25px;
+  padding-top: 25px;
   @media (min-width: 600px) {
     font-weight: bold;
     font-size: calc(10px + 2vmin);

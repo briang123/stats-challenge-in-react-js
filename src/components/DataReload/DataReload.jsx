@@ -60,8 +60,5 @@ const ReloadContainer = styled.div`
   }
   @media (min-width: 600px) {
     min-width: 55vw;
-    & button {
-      margin: 0px;
-    }
   }
 `;

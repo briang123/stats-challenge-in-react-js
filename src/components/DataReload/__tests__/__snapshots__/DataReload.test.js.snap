@@ -80,10 +80,6 @@ exports[`<DataReload /> Should match snapshot with props 1`] = `
   .c1 {
     min-width: 55vw;
   }
-
-  .c1 button {
-    margin: 0px;
-  }
 }
 
 <div

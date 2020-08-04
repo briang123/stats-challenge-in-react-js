@@ -84,7 +84,7 @@ const InputButtonGroup = styled.div`
   & button {
     min-width: 125px;
     width: 100%;
-    height: 76px;
+    height: 78px;
   }
 
   @media (min-width: 600px) {
@@ -92,6 +92,7 @@ const InputButtonGroup = styled.div`
     & button {
       min-width: 250px;
       width: 100%;
+      height: 78px;
     }
   }
 `;

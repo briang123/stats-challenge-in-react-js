@@ -35,7 +35,7 @@ describe('<NumberInput />', () => {
 
     expect(console.error).not.toHaveBeenCalled();
 
-    debug();
+    // debug();
 
     expect(ref.current).not.toBeNull();
     expect(ref.current.getAttribute('type')).toEqual('number');
